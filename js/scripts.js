@@ -7,24 +7,13 @@ function Pizza(size, crust, toppings, possibleToppings, price) {
 }
 
 function PossibleToppings() {
-  this.lol = ["lol", 2];
-  this.pepperoni = ["pepperoni", 1];
-  this.sausage = ["sausage", 1];
-  this.bacon = ["bacon", 1];
-  this.cBacon = ["cBacon", 1];
-  this.extraCheese = ["extraCheese", 1];
-  this.mushrooms = ["mushrooms", 1/2];
-  this.bellPeppers = ["bellPeppers", 1/2];
-  this.pineapple = ["pineapple", 1/2];
-  this.jalapenos = ["jalapenos", 1/2];
-  this.olives = ["olives", 1/2];
-  this.tomatoes = ["tomatoes", 1/2];
-  this.basil = ["basil", 1/2];
+  this.choices = ["lol", "pepperoni", "sausage", "bacon", "cBacon", "extraCheese", "mushrooms", "bellPeppers", "pineapple", "jalapenos", "olives", "tomatoes", "basil"];
+  this.cost = [2, 1, 1, 1, 1, 1, 1/2, 1/2, 1/2, 1/2, 1/2, 1/2, 1/2];
 }
 
 Pizza.prototype.instantPizza = function() {
   this.possibleToppings = new PossibleToppings;
-  return this.possibleToppings.pepperoni[0];
+  return this.possibleToppings.choices[1];
 }
 
 Pizza.prototype.toppingPusher = function() {

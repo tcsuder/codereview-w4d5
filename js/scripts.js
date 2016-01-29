@@ -22,7 +22,6 @@ Pizza.prototype.toppingPusher = function(choice) {
 }
 
 Pizza.prototype.priceCalculator = function() {
-  debugger;
   for (var i = 0; i < 13; i++) {
     if (this.toppings.indexOf(this.possibleToppings.choices[i]) !== -1) {
       this.price += this.possibleToppings.cost[i];
@@ -31,3 +30,36 @@ Pizza.prototype.priceCalculator = function() {
   }
   return this.price
 }
+
+
+
+$(document).ready(function() {
+  $("div#menu").click(function() {
+    $("#user-options").slideDown();
+  });
+  $("div#specials").click(function() {
+    $("#specials-menu").slideDown();
+  });
+  $("div#hawaiian").click(function () {
+
+  });
+  $("div#hawaiian").click(function () {
+
+  });
+  $("div#hawaiian").click(function () {
+
+  });
+  $("div#hawaiian").click(function () {
+
+  });
+
+// *************************** PIZZA ORDER
+
+  var pizza1 = new Pizza();
+  pizza1.instaPizza();
+
+  $("for#toppings-form").submit(function(event) {
+    event.preventDefault();
+
+  });
+});

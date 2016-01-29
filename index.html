@@ -5,6 +5,7 @@
     <link href="css/styles.css" rel="stylesheet" type="text/css">
     <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
     <script src="js/jquery-1.12.0.js"></script>
+    <script src="js/bootstrap.min.js"></script>
     <script src="js/scripts.js"></script>
     <title>Pizza</title>
   </head>
@@ -33,19 +34,19 @@
     <section id="order-form">
       <div id="specials-menu">
         <div class="container">
-          <h1>Choose from these favorites:</h1>
+          <h1>Choose a Favorite</h1>
           <hr>
           <div class="row">
-            <div class="col-sm-3">
+            <div id="hawaiian" class="col-sm-3">
               <h3>hawaiian</h3>
             </div>
-            <div class="col-sm-3">
+            <div id="meat" class="col-sm-3">
               <h3>meat lovers</h3>
             </div>
-            <div class="col-sm-3">
-              <h3>veggie</h3>
+            <div id="veggie" class="col-sm-3">
+              <h3>veggie lovers</h3>
             </div>
-            <div class="col-sm-3">
+            <div id="supreme" class="col-sm-3">
               <h3>supreme</h3>
             </div>
           </div>
@@ -53,55 +54,85 @@
       </div>
       <div id="user-options">
         <div class="container">
-          <h1>Build Your Own:</h1>
+          <h1>Build Your Own</h1>
           <hr>
-          <div class="row">
-            <div class="col-sm-3">
-              <h2>pepperoni</h2>
+          <form class="toppings-form">
+            <div class="row">
+              <div class="col-sm-3">
+                <button type="button" class="btn btn-danger" data-toggle="button" aria-pressed="false" autocomplete="off">
+                  <h2>pepperoni</h2>
+                </button>
+              </div>
+              <div class="col-sm-3">
+                <button type="button" class="btn btn-danger" data-toggle="button" aria-pressed="false" autocomplete="off">
+                  <h2>sausage</h2>
+                </button>
+              </div>
+              <div class="col-sm-3">
+                <button type="button" class="btn btn-danger" data-toggle="button" aria-pressed="false" autocomplete="off">
+                  <h2>bacon</h2>
+                </button>
+              </div>
+              <div class="col-sm-3">
+                <button type="button" class="btn btn-warning" data-toggle="button" aria-pressed="false" autocomplete="off">
+                  <h2>extra cheese</h2>
+                </button>
+              </div>
             </div>
-            <div class="col-sm-3">
-              <h2>sausage</h2>
+            <div class="row">
+              <div class="col-sm-3">
+                <button type="button" class="btn btn-success" data-toggle="button" aria-pressed="false" autocomplete="off">
+                  <h2>mushrooms</h2>
+                </button>
+              </div>
+              <div class="col-sm-3">
+                <button type="button" class="btn btn-success" data-toggle="button" aria-pressed="false" autocomplete="off">
+                  <h2>bell peppers</h2>
+                </button>
+              </div>
+              <div class="col-sm-3">
+                <button type="button" class="btn btn-warning" data-toggle="button" aria-pressed="false" autocomplete="off">
+                  <h2>pineapple</h2>
+                </button>
+              </div>
+              <div class="col-sm-3">
+                <button type="button" class="btn btn-success" data-toggle="button" aria-pressed="false" autocomplete="off">
+                  <h2>jalapeno</h2>
+                </button>
+              </div>
             </div>
-            <div class="col-sm-3">
-              <h2>bacon</h2>
+            <div class="row">
+              <div class="col-sm-3">
+                <button type="button" class="btn btn-success" data-toggle="button" aria-pressed="false" autocomplete="off">
+                  <h2>olives</h2>
+                </button>
+              </div>
+              <div class="col-sm-3">
+                <button type="button" class="btn btn-danger" data-toggle="button" aria-pressed="false" autocomplete="off">
+                  <h2>tomatoes</h2>
+                </button>
+              </div>
+              <div class="col-sm-3">
+                <button type="button" class="btn btn-success" data-toggle="button" aria-pressed="false" autocomplete="off">
+                  <h2>basil</h2>
+                </button>
+              </div>
+              <div class="col-sm-3">
+                <button type="button" class="btn btn-danger" data-toggle="button" aria-pressed="false" autocomplete="off">
+                  <h2>lots of love</h2>
+                </button>
+              </div>
             </div>
-            <div class="col-sm-3">
-              <h2>extra cheese</h2>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-sm-3">
-              <h2>mushrooms</h2>
-            </div>
-            <div class="col-sm-3">
-              <h2>bell peppers</h2>
-            </div>
-            <div class="col-sm-3">
-              <h2>pinapple</h2>
-            </div>
-            <div class="col-sm-3">
-              <h2>jalapenos</h2>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-sm-3">
-              <h2>olives</h2>
-            </div>
-            <div class="col-sm-3">
-              <h2>tomatoes</h2>
-            </div>
-            <div class="col-sm-3">
-              <h2>basil</h2>
-            </div>
-            <div class="col-sm-3">
-              <h2>lots of love</h2>
-            </div>
-          </div>
+            <button id="order-btn" type="submit" class="btn btn-xl" name="button">Click to Order</button>
+          </form>
         </div>
       </div>
     </section>
-    <!-- <section class="footer">
-      <p>The Pizza Place is a <a class="tyler-click" href="http://tcsuder.github.io/codereview-w1d5/">Tyler Suderman</a> creation</p>
-    </section> -->
+    <section id="reciept">
+      <div class="container">
+        <h2>Thank you for your order!</h2>
+        <p>Your pizza will cost <span id="final-cost"></span>.</p>
+      </div>
+    </section>
   </body>
 </html>

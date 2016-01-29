@@ -1,6 +1,16 @@
+#user-options, #specials-menu, #reciept {
+  display:none;
+}
+
+
+
 body {
   background-color: #4D0A00;
   color: #4D0A00;
+}
+
+.container {
+  80%
 }
 
 h2 {
@@ -15,10 +25,8 @@ h2 {
 }
 
 #pizza-dash {
-  width: 111%;
-  margin-left: 20px;
   margin-top: 2em;
-  border-top: 1em solid #7AF597;
+  border-top: 1em solid #170808;
 }
 
 .row1 {
@@ -63,9 +71,8 @@ h2 {
 }
 
 #specials-menu hr {
-  margin-left: -20em;
   margin-top: 1em;
-  border-top: 1em solid #7AF597;
+  border-top: 1em solid #170808;
 }
 
 #specials-menu h3 {
@@ -93,27 +100,53 @@ h2 {
 }
 
 #user-options hr {
-  width: 111%;
-  margin-left: 20px;
   margin-top: 1em;
   border-top: 1em solid #170808;
 }
 
-.footer {
-  position: absolute;
-  height: 3em;
-  right: 0;
-  bottom: 0;
-  left: 0;
+.btn {
+  width:15em;
+  margin-bottom: 1em;
+  border-radius: 1em;
+  background-color: #FFFEFA;
+  text-align: center;
+  color: #170808;
+  border: none;
+}
+
+.btn:active {
+  width:15em;
+  margin-bottom: 1em;
+  border-radius: 1em;
   background-color: #170808;
-  padding-left: 2em;
+  border: none;
+  text-align: center;
+  color: #FFFEFA;
 }
 
-.footer p {
-  color:#FFFEFA;
-  padding-top: .75em;
+/* I dont' have any more time to mess with this, but I can't get my buttons to work correctly because of pseudo-class focus. Can't figure out how to override it.
+
+/*.btn:focus {
+  outline: none;
 }
 
-.footer a {
-  color:#FFFEFA;
+.btn:active {
+  outline: none;
+  background-color: none;
+}
+
+.btn-default:active:focus {
+  outline: none;
+}*/
+
+#order-btn {
+  margin-top: 3em;
+  background-color: #FFFEFA;
+  border-radius: 1em;
+  height: 3em;
+}
+
+.reciept {
+  background-color: #FFFEFA;
+  color: #170808;
 }

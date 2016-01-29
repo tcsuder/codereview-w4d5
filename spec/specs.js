@@ -8,3 +8,22 @@ describe ('Pizza', function(size, crust, toppings, possibleToppings, price) {
     expect(testPizza.price).to.equal(12);
   });
 });
+
+describe ('PossibleToppings', function() {
+  it("will create a PossibleToppings object witht he given properties", function () {
+    var testPossibleToppings = new PossibleToppings();
+    expect(testPossibleToppings.lol).to.eql(["lol", 2]);
+    expect(testPossibleToppings.pepperoni).to.eql(["pepperoni", 1]);
+    expect(testPossibleToppings.sausage).to.eql(["sausage", 1]);
+    expect(testPossibleToppings.bacon).to.eql(["bacon", 1]);
+    expect(testPossibleToppings.cBacon).to.eql(["cBacon", 1]);
+    expect(testPossibleToppings.extraCheese).to.eql(["extraCheese", 1]);
+    expect(testPossibleToppings.mushrooms).to.eql(["mushrooms", 1/2]);
+    expect(testPossibleToppings.bellPeppers).to.eql(["bellPeppers", 1/2]);
+    expect(testPossibleToppings.pineapple).to.eql(["pineapple", 1/2]);
+    expect(testPossibleToppings.jalapenos).to.eql(["jalapenos", 1/2]);
+    expect(testPossibleToppings.olives).to.eql(["olives", 1/2]);
+    expect(testPossibleToppings.tomatoes).to.eql(["tomatoes", 1/2]);
+    expect(testPossibleToppings.basil).to.eql(["basil", 1/2]);
+  });
+});

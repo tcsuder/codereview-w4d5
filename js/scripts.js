@@ -26,3 +26,9 @@ Pizza.prototype.instantPizza = function() {
   this.possibleToppings = new PossibleToppings;
   return this.possibleToppings.pepperoni[0];
 }
+
+Pizza.prototype.toppingPusher = function() {
+  var pizza = new Pizza;
+  pizza.toppings.push("pepperoni", "lol")
+  return pizza.toppings
+}

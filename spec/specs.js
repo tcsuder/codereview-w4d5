@@ -12,6 +12,12 @@ describe ('Pizza', function(size, crust, toppings, possibleToppings, price) {
     var testPizza = new Pizza;
     expect(testPizza.instantPizza()).to.equal("pepperoni");
   });
+
+  it("will push toppings from pizza.possibleToppings to pizza.toppings array", function () {
+    var testPizza = new Pizza;
+    testPizza.newPizza();
+    expect(testPizza.toppingPusher("pepperoni")).to.equal(testPizza.possibleToppings.pepperoni[0]);
+  });
 });
 
 describe ('PossibleToppings', function() {

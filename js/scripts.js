@@ -41,16 +41,20 @@ $(document).ready(function() {
     $("#specials-menu").slideDown();
   });
   $("div#hawaiian").click(function () {
-
+    $("button").removeClass("active");
+    $("button#bacon, button#pineapple").addClass("active");
   });
-  $("div#hawaiian").click(function () {
-
+  $("div#meat").click(function () {
+    $("button").removeClass("active");
+    $("button#bacon, button#sausage, button#pepperoni").addClass("active");
   });
-  $("div#hawaiian").click(function () {
-
+  $("div#veggielovers").click(function () {
+    $("button").removeClass("active");
+    $("button#mushrooms, button#bell-peppers, button#olives, button#tomatoes").addClass("active");
   });
-  $("div#hawaiian").click(function () {
-
+  $("div#supreme").click(function () {
+    $("button").removeClass("active");
+    $("button#mushrooms, button#bell-peppers, button#olives, button#tomatoes, button#bacon, button#pepperoni").addClass("active");
   });
 
 // *************************** PIZZA ORDER

@@ -15,7 +15,7 @@ h2 {
 }
 
 #pizza-dash {
-  width: 120%;
+  width: 111%;
   margin-left: 20px;
   margin-top: 2em;
   border-top: 1em solid #7AF597;
@@ -51,9 +51,52 @@ h2 {
   margin-top: .5em;
   text-align: center;
   background-color: #170808;
-  color: #FFFEFA;
   border-top-left-radius: 2em;
   border-top-right-radius: 2em;
+}
+
+#specials-menu {
+  padding-top: 3em;
+  background-color: #FFFEFA;
+  color: #170808;
+  text-align: center;
+}
+
+#specials-menu hr {
+  margin-left: -20em;
+  margin-top: 1em;
+  border-top: 1em solid #7AF597;
+}
+
+#specials-menu h3 {
+  height: 2.5em;
+  margin-bottom: -5px;
+  padding-top: .5em;
+  border-top-left-radius: 2em;
+  border-top-right-radius: 2em;
+}
+
+#specials-menu h3:hover {
+  cursor: pointer;
+  height: 2.5em;
+  margin-bottom: -5px;
+  background-color: #4D0A00;
+  color: #FFFEFA;
+  border-top-left-radius: 1em;
+  border-top-right-radius: 1em;
+}
+
+#user-options {
+  color: #FFFEFA;
+  padding-top: 3em;
+  text-align: center;
+}
+
+#user-options hr {
+  width: 111%;
+  margin-left: 20px;
+  margin-top: 1em;
+  border-top: 1em solid #170808;
 }
 
 .footer {

@@ -7,8 +7,8 @@ function Pizza(size, crust, toppings, possibleToppings, price) {
 }
 
 function PossibleToppings() {
-  this.choices = ["lol", "pepperoni", "sausage", "bacon", "cBacon", "extraCheese", "mushrooms", "bellPeppers", "pineapple", "jalapenos", "olives", "tomatoes", "basil"];
-  this.cost = [2, 1, 1, 1, 1, 1, 1/2, 1/2, 1/2, 1/2, 1/2, 1/2, 1/2];
+  this.choices = ["lol", "pepperoni", "sausage", "bacon", "extraCheese", "mushrooms", "bellPeppers", "pineapple", "jalapenos", "olives", "tomatoes", "basil"];
+  this.cost = [2, 1, 1, 1, 1, 1/2, 1/2, 1/2, 1/2, 1/2, 1/2, 1/2];
 }
 
 Pizza.prototype.instaPizza = function() {

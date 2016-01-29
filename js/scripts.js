@@ -11,13 +11,12 @@ function PossibleToppings() {
   this.cost = [2, 1, 1, 1, 1, 1, 1/2, 1/2, 1/2, 1/2, 1/2, 1/2, 1/2];
 }
 
-Pizza.prototype.instantPizza = function() {
+Pizza.prototype.instaPizza = function() {
   this.possibleToppings = new PossibleToppings;
   return this.possibleToppings.choices[1];
 }
 
-Pizza.prototype.toppingPusher = function() {
-  var pizza = new Pizza;
-  pizza.toppings.push("pepperoni", "lol")
-  return pizza.toppings
+Pizza.prototype.toppingPusher = function(choice) {
+  this.toppings.push(choice)
+  return this.toppings[0];
 }

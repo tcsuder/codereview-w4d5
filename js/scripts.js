@@ -18,5 +18,16 @@ Pizza.prototype.instaPizza = function() {
 
 Pizza.prototype.toppingPusher = function(choice) {
   this.toppings.push(choice)
-  return this.toppings[0];
+  return this.toppings[this.toppings.length-1];
+}
+
+Pizza.prototype.priceCalculator = function() {
+  debugger;
+  for (var i = 0; i < 13; i++) {
+    if (this.toppings.indexOf(this.possibleToppings.choices[i]) !== -1) {
+      this.price += this.possibleToppings.cost[i];
+      console.log(this.price);
+    }
+  }
+  return this.price
 }

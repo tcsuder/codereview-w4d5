@@ -1,0 +1,76 @@
+body {
+  background-color: #4D0A00;
+  color: #4D0A00;
+}
+
+h2 {
+  font-family: 'Monserrat', arial, sans-serif;
+  font-weight: 700;
+}
+
+#pizza-pic {
+  width:40%;
+  margin-top:-16em;
+  margin-left: -3em;
+}
+
+#pizza-dash {
+  width: 120%;
+  margin-left: 20px;
+  margin-top: 2em;
+  border-top: 1em solid #7AF597;
+}
+
+.row1 {
+  background-color: #4D0A00;
+  height: 5em;
+}
+
+.row2 {
+  background-color: #170808;
+  height: 11em;
+}
+
+.row2 h1 {
+  color: #FFFEFA;
+  text-align: right;
+  width: 90%;
+  font-weight: 700;
+  font-size: 4em;
+}
+
+#menu, #specials {
+  margin-top: .5em;
+  text-align: center;
+  background-color: #4D0A00;
+  color: #FFFEFA;
+}
+
+#menu:hover, #specials:hover {
+  cursor: pointer;
+  margin-top: .5em;
+  text-align: center;
+  background-color: #170808;
+  color: #FFFEFA;
+  border-top-left-radius: 2em;
+  border-top-right-radius: 2em;
+}
+
+.footer {
+  position: absolute;
+  height: 3em;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #170808;
+  padding-left: 2em;
+}
+
+.footer p {
+  color:#FFFEFA;
+  padding-top: .75em;
+}
+
+.footer a {
+  color:#FFFEFA;
+}

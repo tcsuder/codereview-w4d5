@@ -18,6 +18,15 @@ describe ('Pizza', function(size, crust, toppings, possibleToppings, price) {
     testPizza.instaPizza();
     expect(testPizza.toppingPusher("pepperoni")).to.equal(testPizza.possibleToppings.choices[1]);
   });
+
+  it("will add value of toppings to Pizza.price for chioces in toppings array", function() {
+    var testPizza = new Pizza;
+    testPizza.instaPizza();
+    testPizza.toppings.push("lol");
+    testPizza.toppings.push("pepperoni");
+    expect(testPizza.priceCalculator()).to.equal(15);
+  });
+
 });
 
 describe('PossibleToppings', function() {

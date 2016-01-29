@@ -7,6 +7,11 @@ describe ('Pizza', function(size, crust, toppings, possibleToppings, price) {
     expect(testPizza.possibleToppings).to.eql([]);
     expect(testPizza.price).to.equal(12);
   });
+
+  it("will initiate a new Pizza object with possible toppings", function() {
+    var testPizza = new Pizza;
+    expect(testPizza.instantPizza()).to.equal("pepperoni");
+  });
 });
 
 describe ('PossibleToppings', function() {

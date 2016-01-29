@@ -21,3 +21,8 @@ function PossibleToppings() {
   this.tomatoes = ["tomatoes", 1/2];
   this.basil = ["basil", 1/2];
 }
+
+Pizza.prototype.instantPizza = function() {
+  this.possibleToppings = new PossibleToppings;
+  return this.possibleToppings.pepperoni[0];
+}

@@ -11,6 +11,11 @@ function PossibleToppings() {
   this.cost = [2, 1, 1, 1, 1, 1/2, 1/2, 1/2, 1/2, 1/2, 1/2, 1/2];
 }
 
+function PossibleSizes() {
+  this.choices = ["small", "medium", "large"];
+  this.cost = [-1, 0, 2];
+}
+
 Pizza.prototype.instaPizza = function() {
   this.possibleToppings = new PossibleToppings;
   return this.possibleToppings.choices[1];

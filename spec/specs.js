@@ -36,3 +36,11 @@ describe('PossibleToppings', function() {
     expect(testPossibleToppings.cost[1]).to.eql(1);
   });
 });
+
+describe('PossibleSizes', function() {
+  it("will create possibleSizes object with the given properties", function() {
+    var testPossibleSizes = new PossibleSizes();
+    expect(testPossibleSizes.choices[1]).to.equal("medium");
+    expect(testPossibleSizes.cost[1]).to.eql(0);
+  });
+});

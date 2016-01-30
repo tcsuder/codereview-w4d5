@@ -1,6 +1,8 @@
-function Pizza(size, crust, toppings, possibleToppings, price) {
+function Pizza(size, possibleSizes, crust, possibleCrusts, toppings, possibleToppings, price) {
   this.size = size;
+  this.possibleSizes = [];
   this.crust = crust;
+  this.possibleCrusts = [];
   this.toppings = [];
   this.possibleToppings = [];
   this.price = 12;
@@ -16,8 +18,15 @@ function PossibleSizes() {
   this.cost = [-1, 0, 2];
 }
 
+function PossibleCrusts() {
+  this.choices = ["thin", "pan", "deep"];
+  this.cost = [0, 0, 0];
+}
+
 Pizza.prototype.instaPizza = function() {
   this.possibleToppings = new PossibleToppings;
+  this.possibleSizes = new PossibleSizes;
+  this.possibleCrusts = new PossibleCrusts;
   return this.possibleToppings.choices[1];
 }
 

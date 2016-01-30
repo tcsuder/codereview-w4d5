@@ -1,6 +1,6 @@
-describe ('Pizza', function(size, crust, toppings, possibleToppings, price) {
+describe ('Pizza', function(size, possibleSizes, crust, possibleCrusts, toppings, possibleToppings, price) {
   it("will create a Pizza object with the givven properties", function() {
-    var testPizza = new Pizza("medium", "thin", [], [], 12);
+    var testPizza = new Pizza("medium", [], "thin", [], [], [], 12);
     expect(testPizza.size).to.equal("medium");
     expect(testPizza.crust).to.equal("thin");
     expect(testPizza.toppings).to.eql([]);
@@ -42,5 +42,13 @@ describe('PossibleSizes', function() {
     var testPossibleSizes = new PossibleSizes();
     expect(testPossibleSizes.choices[1]).to.equal("medium");
     expect(testPossibleSizes.cost[1]).to.eql(0);
+  });
+});
+
+describe('PossibleCrusts', function() {
+  it("will create possibleCrusts object with the given properties", function() {
+    var testPossibleCrusts = new PossibleCrusts();
+    expect(testPossibleCrusts.choices[1]).to.equal("pan");
+    expect(testPossibleCrusts.cost[1]).to.eql(0);
   });
 });

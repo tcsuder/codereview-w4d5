@@ -124,6 +124,14 @@ h2 {
   color: #FFFEFA;
 }
 
+.size-options .btn {
+  
+}
+
+.size-options .btn:hover {
+
+}
+
 /* I dont' have any more time to mess with this, but I can't get my buttons to work correctly because of pseudo-class focus. Can't figure out how to override it.
 
 /*.btn:focus {

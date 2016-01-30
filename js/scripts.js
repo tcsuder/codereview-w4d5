@@ -40,6 +40,20 @@ $(document).ready(function() {
   $("div#specials").click(function() {
     $("#specials-menu").slideDown();
   });
+  $("div#hawaiian").click(function() {
+    $("#user-options").slideDown();
+  });
+  $("div#meat").click(function() {
+    $("#user-options").slideDown();
+  });
+  $("div#veggie").click(function() {
+    $("#user-options").slideDown();
+  });
+  $("div#supreme").click(function() {
+    $("#user-options").slideDown();
+  });
+
+
   $("div#hawaiian").click(function () {
     $("button").removeClass("active");
     $("button#bacon, button#pineapple").addClass("active");
@@ -48,7 +62,7 @@ $(document).ready(function() {
     $("button").removeClass("active");
     $("button#bacon, button#sausage, button#pepperoni").addClass("active");
   });
-  $("div#veggielovers").click(function () {
+  $("div#veggie").click(function () {
     $("button").removeClass("active");
     $("button#mushrooms, button#bell-peppers, button#olives, button#tomatoes").addClass("active");
   });
@@ -60,10 +74,26 @@ $(document).ready(function() {
 // *************************** PIZZA ORDER
 
   var pizza1 = new Pizza();
-  pizza1.instaPizza();
 
-  $("for#toppings-form").submit(function(event) {
+  $("#options-form").submit(function(event) {
     event.preventDefault();
+    pizza1.instaPizza();
+    var pizzaToppings = [];
+    var size =  $('input[name="size"]:checked').val();
+    var crust = $('input[name="crust"]:checked').val();
+      if (size === undefined) {
+        alert("please pick a size")
+      } else if (crust === undefined) {
+        alert("please pick a crust type")
+      }
+
+    $("button.topping").each(function() {
+      if ($(this).hasClass('active')) {
+        pizzaToppings.push($(this).attr("id"));
+      }
+    });
+    console.log(pizzaToppings);
+
 
   });
 });

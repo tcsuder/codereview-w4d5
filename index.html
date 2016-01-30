@@ -56,71 +56,110 @@
         <div class="container">
           <h1>Build Your Own</h1>
           <hr>
-          <form class="toppings-form">
-            <div class="row">
-              <div class="col-sm-3">
-                <button id="pepperoni" type="button" class="btn btn-danger" data-toggle="button" aria-pressed="false" autocomplete="off">
-                  <h2>pepperoni</h2>
-                </button>
+          <form id="options-form">
+            <!-- <div class="btn-group" data-toggle="buttons">
+              <label id="bacon" class="topping btn btn-primary">
+                <input type="checkbox" autocomplete="off" checked> bacon
+              </label>
+              <label id="bellPeppers" class="topping btn btn-primary">
+                <input type="checkbox" autocomplete="off"> bell peppers
+              </label>
+              <label id='lol' class="topping btn btn-primary">
+                <input type="checkbox" autocomplete="off"> lots of love
+              </label>
+            </div> -->
+            <div class="topping-options">
+              <div class="row">
+                <div class="col-sm-3">
+                  <button id="pepperoni" value="1" type="checkbox" class="btn btn-danger topping" data-toggle="button" aria-pressed="false" autocomplete="off">
+                    <h2>pepperoni</h2>
+                  </button>
+                </div>
+                <div class="col-sm-3">
+                  <button id="sausage" value="2" type="checkbox" class="btn btn-danger topping" data-toggle="button" aria-pressed="false" autocomplete="off">
+                    <h2>sausage</h2>
+                  </button>
+                </div>
+                <div class="col-sm-3">
+                  <button id="bacon" value="3" type="checkbox" class="btn btn-danger topping" data-toggle="button" aria-pressed="false" autocomplete="off">
+                    <h2>bacon</h2>
+                  </button>
+                </div>
+                <div class="col-sm-3">
+                  <button id="extraCheese" value="4" type="checkbox" class="btn btn-warning topping" data-toggle="button" aria-pressed="false" autocomplete="off">
+                    <h2>extra cheese</h2>
+                  </button>
+                </div>
               </div>
-              <div class="col-sm-3">
-                <button id="sausage" type="button" class="btn btn-danger" data-toggle="button" aria-pressed="false" autocomplete="off">
-                  <h2>sausage</h2>
-                </button>
+              <div class="row">
+                <div class="col-sm-3">
+                  <button id="mushrooms" value="5" type="checkbox" class="btn btn-success topping" data-toggle="button" aria-pressed="false" autocomplete="off">
+                    <h2>mushrooms</h2>
+                  </button>
+                </div>
+                <div class="col-sm-3">
+                  <button id="bell-peppers" value="6" type="checkbox" class="btn btn-success topping" data-toggle="button" aria-pressed="false" autocomplete="off">
+                    <h2>bell peppers</h2>
+                  </button>
+                </div>
+                <div class="col-sm-3">
+                  <button id="pineapple" value="7" type="checkbox" class="btn btn-warning topping" data-toggle="button" aria-pressed="false" autocomplete="off">
+                    <h2>pineapple</h2>
+                  </button>
+                </div>
+                <div class="col-sm-3">
+                  <button id="jalapenos" value="8" type="checkbox" class="btn btn-success topping" data-toggle="button" aria-pressed="false" autocomplete="off">
+                    <h2>jalapenos</h2>
+                  </button>
+                </div>
               </div>
-              <div class="col-sm-3">
-                <button id="bacon" type="button" class="btn btn-danger" data-toggle="button" aria-pressed="false" autocomplete="off">
-                  <h2>bacon</h2>
-                </button>
-              </div>
-              <div class="col-sm-3">
-                <button id="extra-cheese" type="button" class="btn btn-warning" data-toggle="button" aria-pressed="false" autocomplete="off">
-                  <h2>extra cheese</h2>
-                </button>
+              <div class="row">
+                <div class="col-sm-3">
+                  <button id="olives" value="9" type="checkbox" class="btn btn-success topping" data-toggle="button" aria-pressed="false" autocomplete="off">
+                    <h2>olives</h2>
+                  </button>
+                </div>
+                <div class="col-sm-3">
+                  <button id="tomatoes" value="10" type="checkbox" class="btn btn-danger topping" data-toggle="button" aria-pressed="false" autocomplete="off">
+                    <h2>tomatoes</h2>
+                  </button>
+                </div>
+                <div class="col-sm-3">
+                  <button id="basil" value="11" type="checkbox" class="btn btn-success topping" data-toggle="button" aria-pressed="false" autocomplete="off">
+                    <h2>basil</h2>
+                  </button>
+                </div>
+                <div class="col-sm-3">
+                  <button id="lol" value="0" type="checkbox" class="btn btn-danger topping" data-toggle="button" aria-pressed="false" autocomplete="off">
+                    <h2>lots of love</h2>
+                  </button>
+                </div>
               </div>
             </div>
-            <div class="row">
-              <div class="col-sm-3">
-                <button id="mushrooms" type="button" class="btn btn-success" data-toggle="button" aria-pressed="false" autocomplete="off">
-                  <h2>mushrooms</h2>
-                </button>
-              </div>
-              <div class="col-sm-3">
-                <button id="bell-peppers" type="button" class="btn btn-success" data-toggle="button" aria-pressed="false" autocomplete="off">
-                  <h2>bell peppers</h2>
-                </button>
-              </div>
-              <div class="col-sm-3">
-                <button id="pineapple" type="button" class="btn btn-warning" data-toggle="button" aria-pressed="false" autocomplete="off">
-                  <h2>pineapple</h2>
-                </button>
-              </div>
-              <div class="col-sm-3">
-                <button id="jalapenos" type="button" class="btn btn-success" data-toggle="button" aria-pressed="false" autocomplete="off">
-                  <h2>jalapenos</h2>
-                </button>
+            <div class="size-options">
+              <div class="btn-group" data-toggle="buttons">
+                <label class="btn btn-primary">
+                  <input value="small" type="radio" name="size" autocomplete="off"> small
+                </label>
+                <label class="btn btn-primary">
+                  <input value="medium" type="radio" name="size" autocomplete="off"> medium
+                </label>
+                <label class="btn btn-primary">
+                  <input value="large" type="radio" name="size" autocomplete="off"> large
+                </label>
               </div>
             </div>
-            <div class="row">
-              <div class="col-sm-3">
-                <button id="olives" type="button" class="btn btn-success" data-toggle="button" aria-pressed="false" autocomplete="off">
-                  <h2>olives</h2>
-                </button>
-              </div>
-              <div class="col-sm-3">
-                <button id="tomatoes" type="button" class="btn btn-danger" data-toggle="button" aria-pressed="false" autocomplete="off">
-                  <h2>tomatoes</h2>
-                </button>
-              </div>
-              <div class="col-sm-3">
-                <button id="basil" type="button" class="btn btn-success" data-toggle="button" aria-pressed="false" autocomplete="off">
-                  <h2>basil</h2>
-                </button>
-              </div>
-              <div class="col-sm-3">
-                <button id="lol" type="button" class="btn btn-danger" data-toggle="button" aria-pressed="false" autocomplete="off">
-                  <h2>lots of love</h2>
-                </button>
+            <div class="crust-options">
+              <div class="btn-group" data-toggle="buttons">
+                <label class="btn btn-primary">
+                  <input value="thin" type="radio" name="crust" autocomplete="off"> thin
+                </label>
+                <label class="btn btn-primary">
+                  <input value="pan" type="radio" name="crust" autocomplete="off"> pan
+                </label>
+                <label class="btn btn-primary">
+                  <input value="deep" type="radio" name="crust" autocomplete="off"> deep
+                </label>
               </div>
             </div>
             <button id="order-btn" type="submit" class="btn btn-xl" name="button">Click to Order</button>

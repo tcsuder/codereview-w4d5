@@ -15,7 +15,7 @@ function PossibleToppings() {
 
 function PossibleSizes() {
   this.choices = ["small", "medium", "large"];
-  this.cost = [-1, 0, 2];
+  this.cost = [0, 1, 2];
 }
 
 function PossibleCrusts() {
@@ -39,6 +39,13 @@ Pizza.prototype.priceCalculator = function() {
   for (var i = 0; i < 13; i++) {
     if (this.toppings.indexOf(this.possibleToppings.choices[i]) !== -1) {
       this.price += this.possibleToppings.cost[i];
+      console.log(this.price);
+    }
+  }
+  for (var i = 0; i < 3; i++) {
+    debugger;
+    if (this.size.indexOf(this.possibleSizes.choices[i]) !== -1) {
+      this.price += this.possibleSizes.cost[i];
       console.log(this.price);
     }
   }
@@ -106,8 +113,13 @@ $(document).ready(function() {
         pizzaToppings.push($(this).attr("id"));
       }
     });
-    console.log(pizzaToppings);
 
+    pizza1.size = size;
+    pizza1.crust = crust;
+    pizza1.toppings = pizzaToppings;
+
+    pizza1.priceCalculator();
+    console.log(pizza1.price);
 
   });
 });

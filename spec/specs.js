@@ -1,5 +1,5 @@
 describe ('Pizza', function(size, possibleSizes, crust, possibleCrusts, toppings, possibleToppings, price) {
-  it("will create a Pizza object with the givven properties", function() {
+  it("will create a Pizza object with the given properties", function() {
     var testPizza = new Pizza("medium", [], "thin", [], [], [], 12);
     expect(testPizza.size).to.equal("medium");
     expect(testPizza.crust).to.equal("thin");
@@ -20,7 +20,6 @@ describe ('Pizza', function(size, possibleSizes, crust, possibleCrusts, toppings
     testPizza.toppings.push("pepperoni");
     expect(testPizza.priceCalculator()).to.equal(15);
   });
-
 });
 
 describe('PossibleToppings', function() {

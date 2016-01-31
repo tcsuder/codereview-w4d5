@@ -46,6 +46,11 @@ Pizza.prototype.priceCalculator = function() {
   return this.price
 }
 
+Pizza.prototype.pizzaPusher = function() {
+  cart = new Cart;
+  cart.pizzas.push(this);
+  return cart.pizzas;
+}
 
 $(document).ready(function() {
 // **************************************CLICK FUNCTION

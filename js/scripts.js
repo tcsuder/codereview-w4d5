@@ -30,31 +30,25 @@ Pizza.prototype.instaPizza = function() {
   return this.possibleToppings.choices[1];
 }
 
-Pizza.prototype.toppingPusher = function(choice) {
-  this.toppings.push(choice)
-  return this.toppings[this.toppings.length-1];
-}
-
 Pizza.prototype.priceCalculator = function() {
   for (var i = 0; i < 13; i++) {
     if (this.toppings.indexOf(this.possibleToppings.choices[i]) !== -1) {
       this.price += this.possibleToppings.cost[i];
-      console.log(this.price);
     }
   }
+
+  // I DON'T KNOW HOW TO GET THIS TO WORK IN MY SPECS. IT WORKS IN MY PAGE JUST FINE.
   for (var i = 0; i < 3; i++) {
-    debugger;
     if (this.size.indexOf(this.possibleSizes.choices[i]) !== -1) {
       this.price += this.possibleSizes.cost[i];
-      console.log(this.price);
     }
   }
   return this.price
 }
 
 
-
 $(document).ready(function() {
+// **************************************CLICK FUNCTION
   $("div#menu").click(function() {
     $("#user-options").slideDown();
   });
@@ -85,11 +79,11 @@ $(document).ready(function() {
   });
   $("div#veggie").click(function () {
     $("button").removeClass("active");
-    $("button#mushrooms, button#bell-peppers, button#olives, button#tomatoes").addClass("active");
+    $("button#mushrooms, button#bellPeppers, button#olives, button#tomatoes").addClass("active");
   });
   $("div#supreme").click(function () {
     $("button").removeClass("active");
-    $("button#mushrooms, button#bell-peppers, button#olives, button#tomatoes, button#bacon, button#pepperoni").addClass("active");
+    $("button#mushrooms, button#bellPeppers, button#olives, button#tomatoes, button#bacon, button#pepperoni").addClass("active");
   });
 
 // *************************** PIZZA ORDER
@@ -104,22 +98,24 @@ $(document).ready(function() {
     var crust = $('input[name="crust"]:checked').val();
       if (size === undefined) {
         alert("please pick a size")
+
       } else if (crust === undefined) {
         alert("please pick a crust type")
-      }
+      } else {
+        $("button.topping").each(function() {
+          if ($(this).hasClass('active')) {
+            pizzaToppings.push($(this).attr("id"));
+          }
+        });
 
-    $("button.topping").each(function() {
-      if ($(this).hasClass('active')) {
-        pizzaToppings.push($(this).attr("id"));
-      }
-    });
+        pizza1.size = size;
+        pizza1.crust = crust;
+        pizza1.toppings = pizzaToppings;
 
-    pizza1.size = size;
-    pizza1.crust = crust;
-    pizza1.toppings = pizzaToppings;
+        pizza1.priceCalculator();
+        $("span#final-cost").text(pizza1.price.toFixed(2));
+        $("section#reciept").slideDown();
 
-    pizza1.priceCalculator();
-    console.log(pizza1.price);
-
+    }
   });
 });

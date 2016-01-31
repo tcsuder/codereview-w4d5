@@ -13,12 +13,6 @@ describe ('Pizza', function(size, possibleSizes, crust, possibleCrusts, toppings
     expect(testPizza.instaPizza("pepperoni")).to.equal("pepperoni");
   });
 
-  it("will push toppings from pizza.possibleToppings to pizza.toppings array", function () {
-    var testPizza = new Pizza;
-    testPizza.instaPizza();
-    expect(testPizza.toppingPusher("pepperoni")).to.equal(testPizza.possibleToppings.choices[1]);
-  });
-
   it("will add value of toppings to Pizza.price for chioces in toppings array", function() {
     var testPizza = new Pizza;
     testPizza.instaPizza();

@@ -1,8 +1,6 @@
-#user-options, #specials-menu, #reciept {
+#user-options, #specials-menu, #reciept{
   display:none;
 }
-
-
 
 body {
   background-color: #4D0A00;
@@ -114,22 +112,18 @@ h2 {
   border: none;
 }
 
+label.btn {
+  padding: 5px;
+  margin-top: 2em;
+
+}
+
 .btn:active {
   width:15em;
   margin-bottom: 1em;
   border-radius: 1em;
-  background-color: #170808;
   border: none;
-  text-align: center;
   color: #FFFEFA;
-}
-
-.size-options .btn {
-  
-}
-
-.size-options .btn:hover {
-
 }
 
 /* I dont' have any more time to mess with this, but I can't get my buttons to work correctly because of pseudo-class focus. Can't figure out how to override it.
@@ -154,7 +148,12 @@ h2 {
   height: 3em;
 }
 
-.reciept {
+#order-btn:hover {
+  background-color: #170808;
+  color: #FFFEFA;
+}
+
+#reciept {
   background-color: #FFFEFA;
   color: #170808;
 }

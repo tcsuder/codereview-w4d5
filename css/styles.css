@@ -1,3 +1,19 @@
+* {
+  margin: 0;
+}
+html, body {
+  height: 100%;
+}
+.wrapper {
+  min-height: 100%;
+  /* equal to footer height */
+  margin-bottom: 3em;
+}
+.wrapper:after {
+  content: "";
+  display: block;
+}
+
 .row {
   margin: 0;
 }
@@ -159,6 +175,15 @@ label.btn {
   outline:none;
 }
 
+hr.pizza-breaker {
+  border-top: solid .5px #170808;
+  width: 50%;
+}
+
+#total-cost {
+  font-weight: bold;
+}
+
 #order-btn {
   margin-top: 3em;
   background-color: #FFFEFA;
@@ -180,21 +205,6 @@ label.btn {
   border-top: 1px solid #170808;
 }
 
-* {
-  margin: 0;
-}
-html, body {
-  height: 100%;
-}
-.wrapper {
-  min-height: 100%;
-  /* equal to footer height */
-  margin-bottom: 3em;
-}
-.wrapper:after {
-  content: "";
-  display: block;
-}
 #footer, .page-wrap:after {
   height: 3em;
 }

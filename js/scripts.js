@@ -5,7 +5,7 @@ function Pizza(size, possibleSizes, crust, possibleCrusts, toppings, possibleTop
   this.possibleCrusts = [];
   this.toppings = [];
   this.possibleToppings = [];
-  this.price = 12;
+  this.price = 14;
 }
 
 function PossibleToppings() {
@@ -92,36 +92,47 @@ $(document).ready(function() {
   });
 
 // *************************** PIZZA ORDER
-
-  var pizza1 = new Pizza();
+  var multiPrice = 0;
 
   $("#options-form").submit(function(event) {
+    var pizza = new Pizza();
     event.preventDefault();
-    pizza1.instaPizza();
+    pizza.instaPizza();
 
     var pizzaToppings = [];
     var size =  $('input[name="size"]:checked').val();
     var crust = $('input[name="crust"]:checked').val();
-      if (size === undefined) {
-        alert("please pick a size")
+    if (size === undefined) {
+      alert("please pick a size")
 
-      } else if (crust === undefined) {
-        alert("please pick a crust type")
-      } else {
-        $("button.topping").each(function() {
-          if ($(this).hasClass('active')) {
-            pizzaToppings.push($(this).attr("id"));
-          }
-        });
+    } else if (crust === undefined) {
+      alert("please pick a crust type")
+    } else {
+      $("button.topping").each(function() {
+        if ($(this).hasClass('active')) {
+          pizzaToppings.push($(this).attr("id"));
+        }
+      });
 
-        pizza1.size = size;
-        pizza1.crust = crust;
-        pizza1.toppings = pizzaToppings;
+      pizza.size = size;
+      pizza.crust = crust;
+      pizza.toppings = pizzaToppings;
 
-        pizza1.priceCalculator();
-        $("span#final-cost").text(pizza1.price.toFixed(2));
-        $("section#reciept").slideDown();
+      pizza.priceCalculator();
+      multiPrice += pizza.price;
 
+      $("div.pizza-cart").append( "<p>Added a pizza with toppings: " + pizza.toppings.join(", ") + ".</p>" +
+                                  "<p style='text-indent: 1em'>Size: " + pizza.size + "</p>" +
+                                  "<p style='text-indent: 1em'>Crust: " + pizza.crust + "</p>" +
+                                  "<p style='text-indent: 1em'><strong>Price:</strong> $" + pizza.price.toFixed(2) + "</p>" +
+                                  "<hr class='pizza-breaker'>"
+      );
+
+      $("section#reciept").slideDown();
+      if (multiPrice >= 24) {
+        $("div#total-cost").append( "<h4>Total Cost: $" + multiPrice.toFixed(2) + "</h4>" +
+                                    "<p>Come on by! Pick 'em up!</p>");
+      }
     }
   });
 });

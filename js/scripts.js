@@ -27,6 +27,7 @@ Pizza.prototype.instaPizza = function() {
   this.possibleToppings = new PossibleToppings;
   this.possibleSizes = new PossibleSizes;
   this.possibleCrusts = new PossibleCrusts;
+  this.price = 12;
   return this.possibleToppings.choices[1];
 }
 
@@ -98,6 +99,7 @@ $(document).ready(function() {
   $("#options-form").submit(function(event) {
     event.preventDefault();
     pizza1.instaPizza();
+
     var pizzaToppings = [];
     var size =  $('input[name="size"]:checked').val();
     var crust = $('input[name="crust"]:checked').val();

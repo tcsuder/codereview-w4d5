@@ -1,3 +1,7 @@
+.row {
+  margin: 0;
+}
+
 #user-options, #specials-menu, #reciept{
   display:none;
 }
@@ -124,22 +128,36 @@ label.btn {
   border-radius: 1em;
   border: none;
   color: #FFFEFA;
+  outline:none;
 }
 
-/* I dont' have any more time to mess with this, but I can't get my buttons to work correctly because of pseudo-class focus. Can't figure out how to override it.
-
-/*.btn:focus {
-  outline: none;
+.btn-success:focus, .btn-success.focus{
+  outline:none;
+  background-color: #FFFEFA;
+  color: #170808;
 }
 
-.btn:active {
-  outline: none;
-  background-color: none;
+.btn-warning:focus, .btn-warning.focus{
+  outline:none;
+  background-color: #FFFEFA;
+  color: #170808;
 }
 
-.btn-default:active:focus {
-  outline: none;
-}*/
+.btn-danger:focus, .btn-danger.focus{
+  outline:none;
+  background-color: #FFFEFA;
+  color: #170808;
+}
+
+.btn-info:focus, .btn-info.focus{
+  outline:none;
+  background-color: #FFFEFA;
+  color: #170808;
+}
+
+.btn:focus, .btn.active:focus, .btn.active:focus, .btn.focus, .btn:active.focus, .btn.active.focus {
+  outline:none;
+}
 
 #order-btn {
   margin-top: 3em;
@@ -156,4 +174,47 @@ label.btn {
 #reciept {
   background-color: #FFFEFA;
   color: #170808;
+}
+
+#reciept hr {
+  border-top: 1px solid #170808;
+}
+
+* {
+  margin: 0;
+}
+html, body {
+  height: 100%;
+}
+.wrapper {
+  min-height: 100%;
+  /* equal to footer height */
+  margin-bottom: 3em;
+}
+.wrapper:after {
+  content: "";
+  display: block;
+}
+#footer, .page-wrap:after {
+  height: 3em;
+}
+#footer {
+  background: #170808;
+  color: #FFFEFA;
+}
+
+#footer h5 {
+  margin-left: 1em;
+  padding-top: .75em;
+}
+
+#footer a {
+  text-decoration: underline;;
+  font-weight: bold;
+  font-size: 1.2em;
+  color: #FFFEFA;
+}
+
+#footer a:hover {
+  color: #ec971f;
 }

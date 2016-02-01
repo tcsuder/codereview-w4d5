@@ -10,164 +10,171 @@
     <title>Pizza</title>
   </head>
   <body>
-    <section class="banner">
-      <div class="row row1">
-        <div class="container">
-          <div class="col-sm-7">
-          </div>
-          <div id="menu" class="col-sm-2">
-            <h2>MENU</h2>
-          </div>
-          <div id="specials" class="col-sm-3">
-            <h2>SPECIALS</h2>
+    <div class="wrapper">
+      <section class="banner">
+        <div class="row row1">
+          <div class="container">
+            <div class="col-sm-7">
+            </div>
+            <div id="menu" class="col-sm-2">
+              <h2>MENU</h2>
+            </div>
+            <div id="specials" class="col-sm-3">
+              <h2>SPECIALS</h2>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="row row2">
-        <div class="container">
-          <hr id="pizza-dash">
-          <h1>THE PIZZA PLACE</h1>
-          <img id="pizza-pic" src="img/cartoon.png" alt="image of a pizza" />
+        <div class="row row2">
+          <div class="container">
+            <hr id="pizza-dash">
+            <h1>THE PIZZA PLACE</h1>
+            <img id="pizza-pic" src="img/cartoon.png" alt="image of a pizza" />
+          </div>
         </div>
-      </div>
-    </section>
-    <section id="order-form">
-      <div id="specials-menu">
+      </section>
+      <section id="order-form">
+        <div id="specials-menu">
+          <div class="container">
+            <h1>Choose a Favorite</h1>
+            <hr>
+            <div class="row">
+              <div id="hawaiian" class="col-sm-3">
+                <h3>hawaiian</h3>
+              </div>
+              <div id="meat" class="col-sm-3">
+                <h3>meat lovers</h3>
+              </div>
+              <div id="veggie" class="col-sm-3">
+                <h3>veggie lovers</h3>
+              </div>
+              <div id="supreme" class="col-sm-3">
+                <h3>supreme</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="user-options">
+          <div class="container">
+            <h1>Build Your Own</h1>
+            <hr>
+            <form id="options-form">
+              <div class="topping-options">
+                <div class="row">
+                  <div class="col-sm-3">
+                    <button id="pepperoni" type="checkbox" class="btn btn-danger topping" data-toggle="button" aria-pressed="false" autocomplete="off">
+                      <h2>pepperoni</h2>
+                    </button>
+                  </div>
+                  <div class="col-sm-3">
+                    <button id="sausage" type="checkbox" class="btn btn-danger topping" data-toggle="button" aria-pressed="false" autocomplete="off">
+                      <h2>sausage</h2>
+                    </button>
+                  </div>
+                  <div class="col-sm-3">
+                    <button id="bacon" type="checkbox" class="btn btn-danger topping" data-toggle="button" aria-pressed="false" autocomplete="off">
+                      <h2>bacon</h2>
+                    </button>
+                  </div>
+                  <div class="col-sm-3">
+                    <button id="extraCheese" type="checkbox" class="btn btn-warning topping" data-toggle="button" aria-pressed="false" autocomplete="off">
+                      <h2>extra cheese</h2>
+                    </button>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-sm-3">
+                    <button id="mushrooms" type="checkbox" class="btn btn-success topping" data-toggle="button" aria-pressed="false" autocomplete="off">
+                      <h2>mushrooms</h2>
+                    </button>
+                  </div>
+                  <div class="col-sm-3">
+                    <button id="bellPeppers" type="checkbox" class="btn btn-success topping" data-toggle="button" aria-pressed="false" autocomplete="off">
+                      <h2>bell peppers</h2>
+                    </button>
+                  </div>
+                  <div class="col-sm-3">
+                    <button id="pineapple" type="checkbox" class="btn btn-warning topping" data-toggle="button" aria-pressed="false" autocomplete="off">
+                      <h2>pineapple</h2>
+                    </button>
+                  </div>
+                  <div class="col-sm-3">
+                    <button id="jalapenos" type="checkbox" class="btn btn-success topping" data-toggle="button" aria-pressed="false" autocomplete="off">
+                      <h2>jalapenos</h2>
+                    </button>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-sm-3">
+                    <button id="olives" type="checkbox" class="btn btn-success topping" data-toggle="button" aria-pressed="false" autocomplete="off">
+                      <h2>olives</h2>
+                    </button>
+                  </div>
+                  <div class="col-sm-3">
+                    <button id="tomatoes" type="checkbox" class="btn btn-success topping" data-toggle="button" aria-pressed="false" autocomplete="off">
+                      <h2>tomatoes</h2>
+                    </button>
+                  </div>
+                  <div class="col-sm-3">
+                    <button id="basil" type="checkbox" class="btn btn-success topping" data-toggle="button" aria-pressed="false" autocomplete="off">
+                      <h2>basil</h2>
+                    </button>
+                  </div>
+                  <div class="col-sm-3">
+                    <button id="lol" type="checkbox" class="btn btn-danger topping" data-toggle="button" aria-pressed="false" autocomplete="off">
+                      <h2>lots of love</h2>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="size-options">
+                <div class="btn-group" data-toggle="buttons">
+                  <label class="btn btn-info">
+                    <input value="small" type="radio" name="size" autocomplete="off">
+                    <h3>small</h3>
+                  </label>
+                  <label class="btn btn-info">
+                    <input value="medium" type="radio" name="size" autocomplete="off">
+                    <h3>medium</h3>
+                  </label>
+                  <label class="btn btn-info">
+                    <input value="large" type="radio" name="size" autocomplete="off">
+                    <h3>large</h3>
+                  </label>
+                </div>
+              </div>
+              <div class="crust-options">
+                <div class="btn-group" data-toggle="buttons">
+                  <label class="btn btn-warning">
+                    <input value="thin" type="radio" name="crust" autocomplete="off">
+                    <h3>thin</h3>
+                  </label>
+                  <label class="btn btn-warning">
+                    <input value="pan" type="radio" name="crust" autocomplete="off">
+                    <h3>pan</h3>
+                  </label>
+                  <label class="btn btn-warning">
+                    <input value="deep" type="radio" name="crust" autocomplete="off">
+                    <h3>deep</h3>
+                  </label>
+                </div>
+              </div>
+              <button id="order-btn" type="submit" class="btn btn-xl" name="button">Click to Order</button>
+            </form>
+          </div>
+        </div>
+      </section>
+      <section id="reciept">
         <div class="container">
-          <h1>Choose a Favorite</h1>
+          <h2>Thank you for your order!</h2>
           <hr>
-          <div class="row">
-            <div id="hawaiian" class="col-sm-3">
-              <h3>hawaiian</h3>
-            </div>
-            <div id="meat" class="col-sm-3">
-              <h3>meat lovers</h3>
-            </div>
-            <div id="veggie" class="col-sm-3">
-              <h3>veggie lovers</h3>
-            </div>
-            <div id="supreme" class="col-sm-3">
-              <h3>supreme</h3>
-            </div>
-          </div>
+          <h4>Your pizza will cost $<span id="final-cost"></span></h4>
+          <p>Come on by! Pick 'er up!</p>
         </div>
-      </div>
-      <div id="user-options">
-        <div class="container">
-          <h1>Build Your Own</h1>
-          <hr>
-          <form id="options-form">
-            <div class="topping-options">
-              <div class="row">
-                <div class="col-sm-3">
-                  <button id="pepperoni" value="1" type="checkbox" class="btn btn-danger topping" data-toggle="button" aria-pressed="false" autocomplete="off">
-                    <h2>pepperoni</h2>
-                  </button>
-                </div>
-                <div class="col-sm-3">
-                  <button id="sausage" value="2" type="checkbox" class="btn btn-danger topping" data-toggle="button" aria-pressed="false" autocomplete="off">
-                    <h2>sausage</h2>
-                  </button>
-                </div>
-                <div class="col-sm-3">
-                  <button id="bacon" value="3" type="checkbox" class="btn btn-danger topping" data-toggle="button" aria-pressed="false" autocomplete="off">
-                    <h2>bacon</h2>
-                  </button>
-                </div>
-                <div class="col-sm-3">
-                  <button id="extraCheese" value="4" type="checkbox" class="btn btn-warning topping" data-toggle="button" aria-pressed="false" autocomplete="off">
-                    <h2>extra cheese</h2>
-                  </button>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-sm-3">
-                  <button id="mushrooms" value="5" type="checkbox" class="btn btn-success topping" data-toggle="button" aria-pressed="false" autocomplete="off">
-                    <h2>mushrooms</h2>
-                  </button>
-                </div>
-                <div class="col-sm-3">
-                  <button id="bellPeppers" value="6" type="checkbox" class="btn btn-success topping" data-toggle="button" aria-pressed="false" autocomplete="off">
-                    <h2>bell peppers</h2>
-                  </button>
-                </div>
-                <div class="col-sm-3">
-                  <button id="pineapple" value="7" type="checkbox" class="btn btn-warning topping" data-toggle="button" aria-pressed="false" autocomplete="off">
-                    <h2>pineapple</h2>
-                  </button>
-                </div>
-                <div class="col-sm-3">
-                  <button id="jalapenos" value="8" type="checkbox" class="btn btn-success topping" data-toggle="button" aria-pressed="false" autocomplete="off">
-                    <h2>jalapenos</h2>
-                  </button>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-sm-3">
-                  <button id="olives" value="9" type="checkbox" class="btn btn-success topping" data-toggle="button" aria-pressed="false" autocomplete="off">
-                    <h2>olives</h2>
-                  </button>
-                </div>
-                <div class="col-sm-3">
-                  <button id="tomatoes" value="10" type="checkbox" class="btn btn-success topping" data-toggle="button" aria-pressed="false" autocomplete="off">
-                    <h2>tomatoes</h2>
-                  </button>
-                </div>
-                <div class="col-sm-3">
-                  <button id="basil" value="11" type="checkbox" class="btn btn-success topping" data-toggle="button" aria-pressed="false" autocomplete="off">
-                    <h2>basil</h2>
-                  </button>
-                </div>
-                <div class="col-sm-3">
-                  <button id="lol" value="0" type="checkbox" class="btn btn-danger topping" data-toggle="button" aria-pressed="false" autocomplete="off">
-                    <h2>lots of love</h2>
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div class="size-options">
-              <div class="btn-group" data-toggle="buttons">
-                <label class="btn btn-info">
-                  <input value="small" type="radio" name="size" autocomplete="off">
-                  <h3>small</h3>
-                </label>
-                <label class="btn btn-info">
-                  <input value="medium" type="radio" name="size" autocomplete="off">
-                  <h3>medium</h3>
-                </label>
-                <label class="btn btn-info">
-                  <input value="large" type="radio" name="size" autocomplete="off">
-                  <h3>large</h3>
-                </label>
-              </div>
-            </div>
-            <div class="crust-options">
-              <div class="btn-group" data-toggle="buttons">
-                <label class="btn btn-warning">
-                  <input value="thin" type="radio" name="crust" autocomplete="off">
-                  <h3>thin</h3>
-                </label>
-                <label class="btn btn-warning">
-                  <input value="pan" type="radio" name="crust" autocomplete="off">
-                  <h3>pan</h3>
-                </label>
-                <label class="btn btn-warning">
-                  <input value="deep" type="radio" name="crust" autocomplete="off">
-                  <h3>deep</h3>
-                </label>
-              </div>
-            </div>
-            <button id="order-btn" type="submit" class="btn btn-xl" name="button">Click to Order</button>
-          </form>
-        </div>
-      </div>
-    </section>
-    <section id="reciept">
-      <div class="container">
-        <h2>Thank you for your order!</h2>
-        <p>Your pizza will cost $<span id="final-cost"></span></p>
-        <p>Come on by! Pick 'er up!</p>
-      </div>
+      </section>
+      <div class="push"></div>
+    </div>
+    <section id="footer">
+      <h5>A <a href="tcsuder.github.io/codereview-w1d5">Tyler Suderman</a> creation.</h5>
     </section>
   </body>
 </html>

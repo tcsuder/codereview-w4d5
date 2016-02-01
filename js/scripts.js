@@ -37,11 +37,10 @@ Pizza.prototype.priceCalculator = function() {
       this.price += this.possibleToppings.cost[i];
     }
   }
-
   // I DON'T KNOW HOW TO GET THIS TO WORK IN MY SPECS. IT WORKS IN MY PAGE JUST FINE.
-  for (var i = 0; i < 3; i++) {
-    if (this.size.indexOf(this.possibleSizes.choices[i]) !== -1) {
-      this.price += this.possibleSizes.cost[i];
+  for (var j = 0; j < 3; j++) {
+    if (this.size.indexOf(this.possibleSizes.choices[j]) !== -1) {
+      this.price += this.possibleSizes.cost[j];
     }
   }
   return this.price

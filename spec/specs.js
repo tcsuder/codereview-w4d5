@@ -1,7 +1,7 @@
-describe ('Pizza', function(size, possibleSizes, crust, possibleCrusts, toppings, possibleToppings, price) {
+describe ('Pizza', function(pizzaSize, possibleSizes, crust, possibleCrusts, toppings, possibleToppings, price) {
   it("will create a Pizza object with the given properties", function() {
     var testPizza = new Pizza("medium", [], "thin", [], [], [], 12);
-    expect(testPizza.size).to.equal("medium");
+    expect(testPizza.pizzaSize).to.equal("medium");
     expect(testPizza.crust).to.equal("thin");
     expect(testPizza.toppings).to.eql([]);
     expect(testPizza.possibleToppings).to.eql([]);

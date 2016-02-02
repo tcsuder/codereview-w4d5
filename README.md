@@ -19,6 +19,6 @@ Testing:  Mocha and Chai
 
 ### Legal
 
-Copyright (c) 2015 **Tyler Suderman**
+Copyright (c) 2016 **Tyler Suderman**
 
 This software is licensed under the MIT license.

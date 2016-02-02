@@ -1,11 +1,11 @@
-function Pizza(size, possibleSizes, crust, possibleCrusts, toppings, possibleToppings, price) {
-  this.size = size;
+function Pizza(pizzaSize, possibleSizes, crust, possibleCrusts, toppings, possibleToppings, price) {
+  this.pizzaSize = pizzaSize;
   this.possibleSizes = [];
   this.crust = crust;
   this.possibleCrusts = [];
   this.toppings = [];
   this.possibleToppings = [];
-  this.price = 14;
+  this.price = 12;
 }
 
 function PossibleToppings() {
@@ -39,7 +39,7 @@ Pizza.prototype.priceCalculator = function() {
   }
   // I DON'T KNOW HOW TO GET THIS TO WORK IN MY SPECS. IT WORKS IN MY PAGE JUST FINE.
   for (var j = 0; j < 3; j++) {
-    if (this.size.indexOf(this.possibleSizes.choices[j]) !== -1) {
+    if (this.pizzaSize.indexOf(this.possibleSizes.choices[j]) !== -1) {
       this.price += this.possibleSizes.cost[j];
     }
   }
@@ -100,7 +100,7 @@ $(document).ready(function() {
     pizza.instaPizza();
 
     var pizzaToppings = [];
-    var size =  $('input[name="size"]:checked').val();
+    var pizzaSize =  $('input[name="size"]:checked').val();
     var crust = $('input[name="crust"]:checked').val();
     if (size === undefined) {
       alert("please pick a size")
@@ -114,7 +114,7 @@ $(document).ready(function() {
         }
       });
 
-      pizza.size = size;
+      pizza.pizzaSize = pizzaSize;
       pizza.crust = crust;
       pizza.toppings = pizzaToppings;
 
@@ -122,7 +122,7 @@ $(document).ready(function() {
       multiPrice += pizza.price;
 
       $("div.pizza-cart").append( "<p>Added a pizza with toppings: " + pizza.toppings.join(", ") + ".</p>" +
-                                  "<p style='text-indent: 1em'>Size: " + pizza.size + "</p>" +
+                                  "<p style='text-indent: 1em'>Size: " + pizza.pizzaSize + "</p>" +
                                   "<p style='text-indent: 1em'>Crust: " + pizza.crust + "</p>" +
                                   "<p style='text-indent: 1em'><strong>Price:</strong> $" + pizza.price.toFixed(2) + "</p>" +
                                   "<hr class='pizza-breaker'>"

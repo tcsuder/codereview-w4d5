@@ -1,12 +1,12 @@
 # THE PIZZA PLACE
 
-##### Website that allows user to order pizza with chosen toppings and receive price based on inputs
+##### This web project allows user to order pizza with chosen toppings and receive price based on inputs.
 
 #### By Tyler Suderman
 
 ## Description
 
-This application is a demonstration of constructors and prototypes using JavaScript and jQuery to create a pizza ordering website.
+This application is a demonstration of constructors and prototypes using JavaScript and jQuery. It also impliments red green refactoring with Mocha and Chai.
 
 ## Setup
 
